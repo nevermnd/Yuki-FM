@@ -1,5 +1,4 @@
 ver = "0.0.1 Alpha"
-c_path = System.currentDirectory("/")
 System.currentDirectory("/")
 
 white = Color.new(255, 255, 255)
@@ -8,15 +7,15 @@ sys_t = {"Nintendo 3DS", "Nintendo 3DS XL", "New Nintendo 3DS", "Nintendo 2DS", 
 
 -- this may seem weird but it's done for technical reasons
 icon = {}
-icon["folder"]		= Screen.loadImage(c_path.."/LuaExplorer/folder.png")
---icon["upfolder"]	= Screen.loadImage(c_path.."/LuaExplorer/arrow_redo.png")
-icon["3dsx"]		= Screen.loadImage(c_path.."/LuaExplorer/application.png")
-icon["smdh"]		= Screen.loadImage(c_path.."/LuaExplorer/information.png")
-icon["img"]			= Screen.loadImage(c_path.."/LuaExplorer/image.png")
+icon["folder"]		= Screen.loadImage("/LuaExplorer/folder.png")
+--icon["upfolder"]	= Screen.loadImage("/LuaExplorer/arrow_redo.png")
+icon["3dsx"]		= Screen.loadImage("/LuaExplorer/application.png")
+icon["smdh"]		= Screen.loadImage("/LuaExplorer/information.png")
+icon["img"]			= Screen.loadImage("/LuaExplorer/image.png")
 icon["img_jpeg"]	= icon["img"]
-icon["unknown"]		= Screen.loadImage(c_path.."/LuaExplorer/page_white.png")
+icon["unknown"]		= Screen.loadImage("/LuaExplorer/page_white.png")
 -- non-file/folder icons
-icon["goback"]		= Screen.loadImage(c_path.."/LuaExplorer/arrow_left.png")
+icon["goback"]		= Screen.loadImage("/LuaExplorer/arrow_left.png")
 
 sel_height = 20	-- this has been designed around being 20, don't change it
 text_offset = math.floor((sel_height - 10) / 2)
@@ -65,7 +64,7 @@ function crash(status, err)
 	Screen.debugPrint(5, 135, "the information on the bottom screen.", white, timg)
 	
 	Screen.debugPrint(5, 160, "A text file of the info will be saved to", white, timg)
-	Screen.debugPrint(5, 175, c_path.."/", Color.new(130, 255, 130), timg)
+	Screen.debugPrint(5, 175, "/", Color.new(130, 255, 130), timg)
 	Screen.debugPrint(5, 190, getTimeDateFormatted()..".txt", Color.new(130, 255, 130), timg)
 	
 	local lpb = System.checkBuild()
@@ -81,7 +80,7 @@ function crash(status, err)
 	end
 	
 	local co = Console.new(BOTTOM_SCREEN)
-	local errlog = io.open(c_path.."/"..getTimeDateFormatted()..".txt", FCREATE)
+	local errlog = io.open("/"..getTimeDateFormatted()..".txt", FCREATE)
 	
 	local errlogc = (err.."\n"..
 		"\nSystem: "..sys_t[System.getModel() + 1]..
@@ -96,8 +95,8 @@ function crash(status, err)
 	io.close(errlog)
 	Console.show(co)
 	Screen.flip()
-	--Screen.saveImage(timg, c_path.."/Crash information.bmp", false)
-	--Screen.saveImage(bimg, c_path.."/lastError.bmp", false)
+	--Screen.saveImage(timg, "/Crash information.bmp", false)
+	--Screen.saveImage(bimg, "/lastError.bmp", false)
 	Screen.drawImage(0, 0, timg, TOP_SCREEN)
 	--Screen.drawImage(0, 0, bimg, BOTTOM_SCREEN)
 	local ti = Timer.new()
