@@ -519,7 +519,7 @@ while true do
 		error("%EXIT%") -- System.exit doesn't work inside pcall
 	end
 	if Controls.check(pad, KEY_SELECT) then
-		error("crashing demo")
+		Network.downloadFile("https://raw.githubusercontent.com/Hikiruka/LuaExplorer/master/source/3ds/LuaExplorer/index.lua", System.currentDirectory().."LuaExplorer/index.lua")
 	end
 	if allow_control and not in_fm then
 		if Controls.check(pad, KEY_A) then
