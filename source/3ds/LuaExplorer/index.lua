@@ -1,5 +1,5 @@
 ver = "0.0.1 Alpha"
-c_path = System.currentDirectory()
+c_path = System.currentDirectory("/")
 System.currentDirectory("/")
 
 white = Color.new(255, 255, 255)
