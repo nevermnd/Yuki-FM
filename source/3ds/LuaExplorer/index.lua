@@ -88,7 +88,7 @@ function crash(status, err)
 		"\nKernel: "..System.getKernel()..
 		"\nRegion: "..rg..
 		"\nlpp build: "..lpb..
-		"\n"..c_path)
+		"\n")
 
 	Console.append(co, errlogc)
 	io.write(errlog, 0, errlogc, string.len(errlogc))
@@ -411,8 +411,8 @@ function renderMain(debug_thing)
 	end
 	Screen.fillRect(0, 319, 240 - sel_height, 239, Color.new(0, 0, 255, 100), BOTTOM_SCREEN)
 	Screen.debugPrint(text_offset, 240 - sel_height + text_offset, sel.." / "..#d_c, white, BOTTOM_SCREEN)
-	Screen.debugPrint(3, 5, "Another file manager "..ver, white, TOP_SCREEN)
-	--Screen.debugPrint(3, 20, "c_path: "..c_path, white, TOP_SCREEN)
+	Screen.debugPrint(3, 5, "Lua Explorer "..ver, white, TOP_SCREEN)
+	--Screen.debugPrint(3, 20, "/", white, TOP_SCREEN)
 	if debug_thing then
 		Screen.debugPrint(3, 25, "a: "..tostring(debug_thing), white, TOP_SCREEN)
 	end
