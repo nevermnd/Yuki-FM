@@ -1,5 +1,5 @@
 # LuaExplorer
-This is yet another file manager being made with Lua Player Plus. As of this writing, it is currently not suitable for normal use. It is currently in rewrite, and updates wilkl be pushed to the repo
+This is yet another file manager being made with Lua Player Plus. As of this writing, it is currently not suitable for normal use. It is currently in rewrite, and updates will be pushed to the repo
 
 # What is working
 * Built In updater
