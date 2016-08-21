@@ -58,8 +58,8 @@ function crash(status, err)
 	Screen.debugPrint(5, 65, "It's recommended that you report this issue", white, timg)
 	Screen.debugPrint(5, 80, "if it happens constantly.", white, timg)
 	
-	Screen.debugPrint(5, 105, "Go to https://github.com/Hikiruka/LuaExplorer/issues and describe what", white, timg)
-	Screen.debugPrint(56, 105, "https://github.com/Hikiruka/LuaExplorer/issues", Color.new(130, 130, 255), timg)
+	Screen.debugPrint(5, 105, "Go to the repo and describe what", white, timg)
+	Screen.debugPrint(56, 105, "the repo", Color.new(130, 130, 255), timg)
 	Screen.debugPrint(5, 120, "you were doing up until it crashed, along with", white, timg)
 	Screen.debugPrint(5, 135, "the information on the bottom screen.", white, timg)
 	
@@ -510,13 +510,18 @@ in_fm = false -- what the hell was this for???
 Graphics.init()
 while true do
 	local checkfile
-	Screen.waitVblankStart()
-	Screen.refresh()
-	Screen.clear(TOP_SCREEN)
-	Screen.clear(BOTTOM_SCREEN)
-	pad = Controls.read()
-	if Controls.check(pad, KEY_START) then -- always allow exit even if other controls are disabled
-		error("%EXIT%") -- System.exit doesn't work inside pcall
+	oldpad = KEY_START
+			while exit_flag == nil do
+				Screen.refresh()
+				Screen.waitVblankStart()
+				pad = Controls.read()
+				Screen.fillEmptyRect(10,300,20,37,black,BOTTOM_SCREEN)
+				Screen.fillRect(11,299,21,36,white,BOTTOM_SCREEN)
+				Screen.debugPrint(13,23,"Controls List",black,BOTTOM_SCREEN)
+				        Screen.fillEmptyRect(10,300,50,232,black,BOTTOM_SCREEN)
+					Screen.fillRect(11,299,51,231,white,BOTTOM_SCREEN)
+					Screen.debugPrint(13,53,"Debug Menu",black,BOTTOM_SCREEN)
+				
 	end
 	if Controls.check(pad, KEY_SELECT) then
 		Network.downloadFile("https://raw.githubusercontent.com/Hikiruka/LuaExplorer/master/source/3ds/LuaExplorer/index.lua", System.currentDirectory().."LuaExplorer/index.lua")
