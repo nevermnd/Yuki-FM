@@ -12,7 +12,7 @@ ifdef SYSTEMROOT
    PLATFORM = win32
 else
    ifeq ($(shell uname), Linux)
-      PLATFORM = UNIX
+      PLATFORM = linux
    endif
 endif
 
