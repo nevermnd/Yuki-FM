@@ -17,6 +17,14 @@ This is yet another file manager being made with Lua Player Plus. As of this wri
 
 # Contributing
 I can only work on this 3 days a week due to me being in school. so If you want to contribute, feel free to make a pull request ^^
+##Build instructions
+The building is made possible through a `make` script, meaning you need to have `make` installed and in your path. If you already use devkitArm then you are good to go
+
+Just run `make` (or `make all`/`make build`) to get your binaries in the build directory
+
+`build 3ds`, `build 3dsx` and `build cia` are also available in case not all binaries need to be built.
+
+You can also use `make clean` to remove all built files.
 
 
 ## Credits
