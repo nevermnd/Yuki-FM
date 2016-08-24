@@ -15,7 +15,7 @@ function createBuildPage {
 	GH_REPOSITORY=${GH_REPO_ARR[1]}
 	shopt -s nullglob
 	for f in *.3ds *.3dsx *.cia *.tar *.gz *.zip; do
-		echo -e "| [$f](https://$GH_REPO_USER.github.io/$GH_REPOSITORY/build/$f) | `du -h $f | cut -f1` |" >> index.md
+		echo -e "| [$f](https://$GH_REPO_USER.github.io/$GH_REPOSITORY/build/$f) | `du -h "$f" | cut -f1` |" >> index.md
 	done
 	cd ..
 	echo -e "\nQR Code for Homebr3w.cia Build:<br>![QR Code](https://$GH_REPO_USER.github.io/$GH_REPOSITORY/build/QRCode.jpg)" >> build/index.md
