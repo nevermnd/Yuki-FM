@@ -33,3 +33,4 @@ Nightlies are available at [the official automatic Nightly build page](https://h
 * Rinnegatamante for Lua Player Plus, [lpp-3ds](https://github.com/Rinnegatamante/lpp-3ds) and ORGANIZE3D as it uses some (mostly) of his code
 * ihavemac for YAFM As it utulizes some of his code
 * astronautlevel2 for the proper updating screen as used in [Star Updater](https://github.com/astronautlevel2/StarUpdater)
+* Wolvan for the nightlies
