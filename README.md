@@ -25,6 +25,8 @@ Just run `make` (or `make all`/`make build`) to get your binaries in the build d
 `build 3ds`, `build 3dsx` and `build cia` are also available in case not all binaries need to be built.
 
 You can also use `make clean` to remove all built files.
+## Nightlies
+Nightlies are available at [the official automatic Nightly build page](https://hikiruka.github.io/Yuki-FM/build/) and build whenever changes get pushed to the `master` branch
 
 
 ## Credits
