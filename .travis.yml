@@ -1,13 +1,1 @@
-language: lua
-sudo: required
 
-before_script:
-  - sudo apt-get install libstdc++6
-  - chmod +x travis-autobuild.sh
-  - chmod +x buildtools/linux/*
-
-script:
-  - make tarzip
-
-after_script:
-  - ./travis-autobuild.sh
