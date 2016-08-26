@@ -1,13 +1,38 @@
+local APP_DIR = "/Yuki FM"
+local APP_THEME_DIR = APP_DIR.."/Themes"
+local APP_CONFIG = APP_DIR.."/config.yuki"
+local default_config = [[
+LoadTheme("Path of Theme")
+]]
+
+local function defaultTheme()
+	rawset(_G, "bg", Graphics.convertFrom(Screen.createImage(1,1, Color.new(0,0,0))))
+	rawset(_G, "selected_item", Color.new(255,0,0))
+	rawset(_G, "menu_color", Color.new(255,255,255))
+	rawset(_G, "selected_color", Color.new(0,255,0))
+end
+
 update_bottom_screen = true
 System.setCpuSpeed(804)
 Graphics.init()
 function LoadTheme(theme)
 	old = System.currentDirectory()
-	System.currentDirectory(System.currentDirectory().."Themes/"..theme)
-	dofile(System.currentDirectory().."/theme.lua")
+	System.currentDirectory(APP_THEME_DIR.."/"..theme)
+	if System.doesFileExist(APP_THEME_DIR.."/"..theme.."/theme.lua") then
+		dofile(System.currentDirectory().."/theme.lua")
+	else
+		defaultTheme()
+	end
 	System.currentDirectory(old)
 end
-dofile(System.currentDirectory().."config.yuki")
+System.createDirectory(APP_DIR)
+System.createDirectory(APP_THEME_DIR)
+if not System.doesFileExist(APP_CONFIG) then
+	local f = io.open(APP_CONFIG, FCREATE)
+	io.write(f, 0, default_config, default_config:len())
+	io.close(f)
+end
+dofile(APP_CONFIG)
 Sound.init()
 white = Color.new(255,255,255)
 black = Color.new(0,0,0)
