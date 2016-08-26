@@ -840,7 +840,7 @@ while true do
 		end
 		Screen.debugPrint(0,225,"Offset: 0x" .. string.format('%X', old_indexes[#old_indexes]) .. " (" .. (old_indexes[#old_indexes]) .. ")",white,TOP_SCREEN)
 	else
-		Screen.debugPrint(0,0,"Yuki FM v.2.0.2 (Public)",green,TOP_SCREEN)
+		Screen.debugPrint(0,0,"Yuki FM v.2.0.3 (Public)",green,TOP_SCREEN)
 		Screen.debugPrint(0,15,"---------------------------------",white,TOP_SCREEN)
 		Screen.debugPrint(0,30,"**App successfully initizalied**.",green,TOP_SCREEN)
 		Screen.debugPrint(0,45,"---------------------------------",white,TOP_SCREEN)
