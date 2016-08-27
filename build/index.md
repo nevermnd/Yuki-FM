@@ -7,8 +7,8 @@ Nightly builds are generated automatically through [Travis-CI](https://travis-ci
 
 ## Warning: These builds may be unstable and may contain bugs. If you use these builds and find any problems, please open a new Issue at [https://github.com/Hikiruka/Yuki-FM/issues](https://github.com/Hikiruka/Yuki-FM/issues)
 
-Latest commit: [#ee5d65f](https://github.com/Hikiruka/Yuki-FM/commit/ee5d65f8f1ef270e7a331ba29a50c2470ccd1e5a)<br>
-Build date: Sat Aug 27 13:02:10 UTC 2016
+Latest commit: [#4e38ba4](https://github.com/Hikiruka/Yuki-FM/commit/4e38ba407c3bb9885e1ef08da549b46a9aca7bf4)<br>
+Build date: Sat Aug 27 14:09:58 UTC 2016
 
 | Download Link | File Size |
 |---------------|-----------|
