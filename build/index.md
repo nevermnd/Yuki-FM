@@ -1,13 +1,6 @@
 ---
 title: Hikiruka/Yuki-FM Nightlies
 ---
-<meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 # Automatic Build System for [Hikiruka/Yuki-FM](https://github.com/Hikiruka/Yuki-FM) Nightlies
 
 Nightly builds are generated automatically through [Travis-CI](https://travis-ci.org/) whenever a new commit is pushed on `master`.
