@@ -17,8 +17,12 @@ This is yet another file manager being made with Lua Player Plus. As of this wri
 
 # Contributing
 I can only work on this 3 days a week due to me being in school. so If you want to contribute, feel free to make a pull request ^^
+# Website
+The Yuki-FM official website is available [here](https://hikiruka.github.io/Yuki-FM/)
+
 ##Build instructions
 The building is made possible through a `make` script, meaning you need to have `make` installed and in your path. If you already use devkitArm then you are good to go
+
 
 Just run `make` (or `make all`/`make build`) to get your binaries in the build directory
 
