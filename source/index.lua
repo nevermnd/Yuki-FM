@@ -1249,7 +1249,7 @@ while true do
 			update_bottom_screen = true
 			p = 1
 			if (mode == "SDMC") then
-				Screen.debugPrint(0, 0, "ExtData is loading, please wait", Color.new(255,255,255), TOP_SCREEN) then
+				Screen.debugPrint(0, 0, "ExtData is loading, please wait", Color.new(255,255,255), TOP_SCREEN)
 				GarbageCollection()
 				mode = "EXTDATA"
 				if (update_main_extdata) then
